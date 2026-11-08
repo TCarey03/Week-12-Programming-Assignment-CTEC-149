@@ -175,3 +175,27 @@ for (const user of sampleUsers) {
     const result = processRegistration(user);
     console.log(user.name, result);
 }
+
+// Phase 5: Validation & Reflection
+
+console.log("Additional Edge Case Tests:");
+
+// Edge Case 1: Username contains an @ symbol
+const edgeCase1 = {
+    name: "Jordan Smith",
+    username: "jordan@smith",
+    phone: "555-123-4567",
+    promoCode: "SUMMER"
+};
+
+// Edge Case 2: Phone number contains letters
+const edgeCase2 = {
+    name: "Taylor Green",
+    username: "taylor_g",
+    phone: "555-ABC-1234",
+    promoCode: ""
+};
+
+// Process both edge cases
+console.log("Edge Case 1:", processRegistration(edgeCase1));
+console.log("Edge Case 2:", processRegistration(edgeCase2));
