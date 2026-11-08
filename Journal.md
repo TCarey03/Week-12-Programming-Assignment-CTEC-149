@@ -39,3 +39,17 @@ The function checks the user's name, username, and phone number. If any required
 If all required information is valid, it formats the phone number and checks whether the user entered the SUMMER promo code. It then returns the registration information and indicates whether the discount was applied.
 
 Building and testing each regular expression separately made this phase easier because I could reuse my existing functions instead of writing all the validation code again. It also made my program more organized and easier to troubleshoot.
+
+------------
+
+Phase 5: Validation & Reflection
+
+In this phase, I tested my completed registration program using the entire sample user dataset. I also added two additional edge cases to check how the program handles invalid information.
+
+The first test used a username containing an @ symbol. The registration correctly failed because the username regular expression only allows letters, numbers, and underscores.
+
+The second test used a phone number containing letters. The registration correctly failed because the phone validation only accepts digits with optional hyphens or dots.
+
+One thing I learned from this assignment is that regular expressions make validating information much easier. I learned how to use anchors, character ranges, quantifiers, capturing groups, and case-insensitive flags. I also learned how to use .test() to validate information and .replace() to reformat phone numbers.
+
+Overall, testing each phase separately helped me find problems and understand how all the functions work together in a complete registration system.
