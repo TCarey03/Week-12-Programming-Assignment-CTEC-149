@@ -17,3 +17,13 @@ The phone validation function uses a regular expression to check for a valid 10-
 The promo code function checks whether the user entered SUMMER. I used the case-insensitive flag i so the code works regardless of uppercase or lowercase letters.
 
 The i flag is cleaner than using .toLowerCase() or multiple if statements because it allows the regular expression to handle capitalization automatically. This makes the code shorter and easier to understand.
+
+------------
+
+Phase 3: Capturing Groups & Phone Reformatting
+
+In this phase, I created a function called formatPhoneNumber() that converts valid phone numbers into a standard format.
+
+I used a regular expression with three capturing groups to separate the area code, exchange, and line number. I then used the .replace() method with $1, $2, and $3 to put the phone number into the format (555) 123-4567.
+
+The difference between .test() and capturing groups is that .test() only checks whether a string matches a pattern and returns true or false. Capturing groups allow us to save specific parts of a matching string so we can extract or reformat the information.
