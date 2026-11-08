@@ -27,3 +27,15 @@ In this phase, I created a function called formatPhoneNumber() that converts val
 I used a regular expression with three capturing groups to separate the area code, exchange, and line number. I then used the .replace() method with $1, $2, and $3 to put the phone number into the format (555) 123-4567.
 
 The difference between .test() and capturing groups is that .test() only checks whether a string matches a pattern and returns true or false. Capturing groups allow us to save specific parts of a matching string so we can extract or reformat the information.
+
+------------
+
+Phase 4: Registration Pipeline Integration
+
+In this phase, I created a function called processRegistration() that brings all my validation functions together.
+
+The function checks the user's name, username, and phone number. If any required information is invalid, it collects error messages and returns a failed registration result.
+
+If all required information is valid, it formats the phone number and checks whether the user entered the SUMMER promo code. It then returns the registration information and indicates whether the discount was applied.
+
+Building and testing each regular expression separately made this phase easier because I could reuse my existing functions instead of writing all the validation code again. It also made my program more organized and easier to troubleshoot.
